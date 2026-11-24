@@ -1,66 +1,60 @@
-# IronPulse — Gym Management System
+# IronPulse – Gym Management System
 
-A responsive web application for managing gym memberships, fitness classes, and live gym analytics using a PHP layout frame, PHP/JSON REST API, and modern ES6+ JavaScript (`fetch`, modules).
+## Description
 
----
+A web-based gym management platform developed using PHP, RESTful JSON APIs, and modern ES6+ JavaScript. The application provides an integrated interface for managing gym memberships, browsing fitness classes and workout schedules, and monitoring real-time facility statistics through asynchronous data fetching.
 
-## Project Folder Structure (Skeleton)
-
-```text
-web_final-project/
-├── api/
-│   ├── members.php        # REST API for members (GET list/details, POST, PUT, DELETE)
-│   └── classes.php        # REST API for classes (GET list & details by ID)
-├── config/
-│   └── config.js          # Centralized API Base URL, endpoints, and headers
-├── services/
-│   └── api.js             # Reusable async/await fetch() wrapper
-├── data/
-│   ├── members.json       # Persistent JSON data store for gym members
-│   └── classes.json       # Persistent JSON data store for gym classes
-├── includes/
-│   ├── header.php         # Shared PHP Header & Navigation Bar
-│   └── footer.php         # Shared PHP Footer
-├── js/
-│   ├── dashboard.js       # Dashboard stats logic (Student 3)
-│   ├── members.js         # Members CRUD & form validation logic (Student 1)
-│   ├── classes.js         # Classes search, filter, pagination & details (Student 2)
-│   └── components/
-│       └── modal.js       # Reusable Details View modal component (Student 2)
-├── css/
-│   └── style.css          # Responsive CSS Grid/Flexbox & Dark/Light theme (Student 3)
-├── index.php              # Dashboard Page (Student 3)
-├── members.php            # Members Management Page (Student 1)
-└── classes.php            # Classes & Workouts Explorer Page (Student 2)
-```
+> **Status:** Project is currently under active development. Core components, REST API integration, and UI modules are being implemented incrementally.
 
 ---
 
-## Team Task Division (3 Students)
+## Main Components
 
-1. **Student 1 (Akobir) — Core API & Members Management (`config/`, `services/api.js`, `api/members.php`, `members.php`, `js/members.js`)**
-   - Centralized API configuration & asynchronous `fetch()` service.
-   - Members data listing (`GET`), Member registration (`POST`), Member editing (`PUT`), and deletion (`DELETE`).
-   - Client-side form validation with user-friendly error/success feedback.
+- **PHP Application Frame:** Modular server-side layout templates (`includes/header.php`, `includes/footer.php`) managing navigation state and multi-page structure.
+- **RESTful API Layer:** Dedicated backend endpoints (`api/members.php`, `api/classes.php`) providing persistent JSON storage and supporting `GET`, `POST`, `PUT`, and `DELETE` HTTP operations.
+- **Asynchronous API Service:** Decoupled ES6 JavaScript service layer (`config/config.js`, `services/api.js`) handling asynchronous `fetch()` calls, HTTP status validation, and error propagation.
+- **Interactive Frontend Views:** Responsive dashboard, member management directory, and workout class catalog built with semantic HTML5, CSS Grid, and Flexbox.
 
-2. **Student 2 — Classes Explorer, Search/Filter, Pagination & Details View (`api/classes.php`, `classes.php`, `js/classes.js`, `js/components/modal.js`)**
-   - Classes & workouts card listing (`GET`).
-   - Search by keyword and filter by category (`Strength`, `HIIT`, `Yoga`, `Cardio`).
-   - Pagination / "Load More" functionality.
-   - Single-item Details Modal (`GET /api/classes.php?id=...`).
+---
 
-3. **Student 3 — PHP Layout Frame, Dashboard Analytics & Responsive UI/UX (`includes/`, `index.php`, `js/dashboard.js`, `css/style.css`, `README.md`)**
-   - Shared PHP navigation frame with active page indicator.
-   - Live Dashboard summary cards (Total Members, Monthly Revenue, Active Classes using ES6 `reduce`/`filter`).
-   - Full mobile/tablet/desktop CSS Grid & Flexbox styling, loading spinners, and Dark/Light theme toggle.
+## Planned Functionality
+
+- **Live Dashboard Analytics:** Automated aggregation of active memberships, tier distributions, and estimated monthly revenue using functional JavaScript array methods (`map`, `filter`, `reduce`).
+- **Member Directory & CRUD Operations:** Full lifecycle management allowing staff to list, register (`POST`), update (`PUT`), and remove (`DELETE`) member records with persistent storage.
+- **Client-Side Form Validation:** Real-time input verification for required fields, name lengths, email formatting, and membership tier selection with inline error feedback.
+- **Class & Workout Explorer:** Dynamic catalog featuring keyword search, category filtering (`Strength`, `HIIT`, `Yoga`, `Cardio`), and incremental pagination ("Load More").
+- **Single-Resource Details View:** On-demand fetching of detailed class schedules, trainer profiles, and capacity limits via itemized REST queries (`GET /api/classes.php?id=:id`) displayed in an accessible modal.
+- **Responsive UI & Theme Toggle:** Mobile-first layout adapting across mobile, tablet, and desktop breakpoints with persistent Dark/Light theme selection.
+
+---
+
+## Technologies
+
+- **PHP (v8.0+)**
+- **JavaScript (ES6+ Modules, Async/Await, Fetch API, DOM Manipulation)**
+- **HTML5 (Semantic Markup)**
+- **CSS3 (Custom Properties, CSS Grid, Flexbox, Media Queries)**
+- **REST API & JSON Data Persistence**
+- **Git & GitHub (Branch-based collaborative workflow)**
 
 ---
 
 ## How to Run Locally
 
-1. Open the project folder in **VS Code** (or place inside XAMPP `htdocs/`).
-2. Start the built-in PHP development server in the terminal:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/akobir-04/gym-management-system.git
+   cd gym-management-system
+   ```
+2. Start the PHP development server from the project root (or place the folder inside XAMPP `htdocs/`):
    ```bash
    php -S localhost:8000
    ```
 3. Open `http://localhost:8000` in your browser.
+
+---
+
+## Known Limitations
+
+- Data persistence currently uses local server-side JSON files (`data/members.json` and `data/classes.json`) rather than a relational production database, designed for lightweight local testing and demonstration.
+- Role-based staff authentication is omitted in the current scope to prioritize direct CRUD and REST API workflow demonstration.
