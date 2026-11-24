@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cls_1",
+    "title": "Power Barbell & Strength",
+    "category": "Strength",
+    "trainer": "Coach Marcus",
+    "schedule": "Mon, Wed, Fri - 18:00",
+    "duration": "60 min",
+    "capacity": 15,
+    "level": "Intermediate",
+    "description": "Full-body compound strength training focusing on squats, deadlifts, and bench press technique."
+  },
+  {
+    "id": "cls_2",
+    "title": "High-Octane HIIT Burn",
+    "category": "HIIT",
+    "trainer": "Coach Sarah",
+    "schedule": "Tue, Thu - 17:30",
+    "duration": "45 min",
+    "capacity": 20,
+    "level": "All Levels",
+    "description": "Fast-paced interval circuits combining kettlebells, battle ropes, and plyometrics."
+  },
+  {
+    "id": "cls_3",
+    "title": "Sunrise Vinyasa & Mobility",
+    "category": "Yoga",
+    "trainer": "Coach Alina",
+    "schedule": "Mon, Wed, Fri - 08:00",
+    "duration": "50 min",
+    "capacity": 18,
+    "level": "Beginner",
+    "description": "Guided flexibility, joint mobility, and breathing session for recovery and core stability."
+  },
+  {
+    "id": "cls_4",
+    "title": "Endurance Spin & Cardio",
+    "category": "Cardio",
+    "trainer": "Coach David",
+    "schedule": "Sat - 10:00",
+    "duration": "45 min",
+    "capacity": 25,
+    "level": "All Levels",
+    "description": "High-energy indoor cycling sprints and hill climbs set to motivational tracks."
+  }
+]
