@@ -1,46 +1,110 @@
 [
-  {
-    "id": "cls_1",
-    "title": "Power Barbell & Strength",
-    "category": "Strength",
-    "trainer": "Coach Marcus",
-    "schedule": "Mon, Wed, Fri - 18:00",
-    "duration": "60 min",
-    "capacity": 15,
-    "level": "Intermediate",
-    "description": "Full-body compound strength training focusing on squats, deadlifts, and bench press technique."
-  },
-  {
-    "id": "cls_2",
-    "title": "High-Octane HIIT Burn",
-    "category": "HIIT",
-    "trainer": "Coach Sarah",
-    "schedule": "Tue, Thu - 17:30",
-    "duration": "45 min",
-    "capacity": 20,
-    "level": "All Levels",
-    "description": "Fast-paced interval circuits combining kettlebells, battle ropes, and plyometrics."
-  },
-  {
-    "id": "cls_3",
-    "title": "Sunrise Vinyasa & Mobility",
-    "category": "Yoga",
-    "trainer": "Coach Alina",
-    "schedule": "Mon, Wed, Fri - 08:00",
-    "duration": "50 min",
-    "capacity": 18,
-    "level": "Beginner",
-    "description": "Guided flexibility, joint mobility, and breathing session for recovery and core stability."
-  },
-  {
-    "id": "cls_4",
-    "title": "Endurance Spin & Cardio",
-    "category": "Cardio",
-    "trainer": "Coach David",
-    "schedule": "Sat - 10:00",
-    "duration": "45 min",
-    "capacity": 25,
-    "level": "All Levels",
-    "description": "High-energy indoor cycling sprints and hill climbs set to motivational tracks."
-  }
+    {
+        "id": 1,
+        "title": "Morning Strength & Conditioning",
+        "category": "Strength",
+        "coach": "Daniel Brooks",
+        "schedule": "Mon, Wed, Fri - 07:30",
+        "duration_mins": 60,
+        "spots_total": 16,
+        "spots_left": 5,
+        "level": "Intermediate",
+        "description": "Compound barbell and dumbbell lifts paired with controlled conditioning blocks."
+    },
+    {
+        "id": 2,
+        "title": "HIIT Metabolic Burn",
+        "category": "Cardio",
+        "coach": "Elena Rostova",
+        "schedule": "Tue, Thu - 08:30",
+        "duration_mins": 45,
+        "spots_total": 20,
+        "spots_left": 7,
+        "level": "All Levels",
+        "description": "High-intensity interval circuits using sleds, rowers, and bodyweight drills."
+    },
+    {
+        "id": 3,
+        "title": "Vinyasa Flow Yoga",
+        "category": "Mobility",
+        "coach": "Maya Lin",
+        "schedule": "Mon, Wed, Fri - 09:30",
+        "duration_mins": 60,
+        "spots_total": 18,
+        "spots_left": 6,
+        "level": "All Levels",
+        "description": "Breath-guided movement focused on flexibility, balance, and active recovery."
+    },
+    {
+        "id": 4,
+        "title": "Boxing Fundamentals",
+        "category": "Combat",
+        "coach": "Tariq Hassan",
+        "schedule": "Tue, Thu - 17:30",
+        "duration_mins": 60,
+        "spots_total": 14,
+        "spots_left": 3,
+        "level": "Beginner",
+        "description": "Stance, footwork, heavy bag combinations, and defensive guard mechanics."
+    },
+    {
+        "id": 5,
+        "title": "Core & Kettlebell Lab",
+        "category": "Strength",
+        "coach": "Daniel Brooks",
+        "schedule": "Tue, Thu - 18:45",
+        "duration_mins": 45,
+        "spots_total": 15,
+        "spots_left": 4,
+        "level": "Intermediate",
+        "description": "Kettlebell swings, Turkish get-ups, and anti-rotation core stability work."
+    },
+    {
+        "id": 6,
+        "title": "Indoor Cycling Sprint",
+        "category": "Cardio",
+        "coach": "Elena Rostova",
+        "schedule": "Mon, Wed - 18:00",
+        "duration_mins": 50,
+        "spots_total": 22,
+        "spots_left": 8,
+        "level": "All Levels",
+        "description": "Paced climbs, cadence sprints, and endurance intervals on stationary bikes."
+    },
+    {
+        "id": 7,
+        "title": "Mobility & Joint Reset",
+        "category": "Mobility",
+        "coach": "Maya Lin",
+        "schedule": "Sat - 10:00",
+        "duration_mins": 50,
+        "spots_total": 16,
+        "spots_left": 9,
+        "level": "All Levels",
+        "description": "Targeted hip, thoracic spine, and shoulder mobility routines to improve range of motion."
+    },
+    {
+        "id": 8,
+        "title": "Kickboxing Conditioning",
+        "category": "Combat",
+        "coach": "Tariq Hassan",
+        "schedule": "Mon, Wed, Fri - 19:00",
+        "duration_mins": 60,
+        "spots_total": 16,
+        "spots_left": 2,
+        "level": "Intermediate",
+        "description": "Punch-kick combos on pads and bags designed to build stamina and power."
+    },
+    {
+        "id": 9,
+        "title": "Weekend Barbell Club",
+        "category": "Strength",
+        "coach": "Daniel Brooks",
+        "schedule": "Sat - 11:30",
+        "duration_mins": 75,
+        "spots_total": 12,
+        "spots_left": 4,
+        "level": "Advanced",
+        "description": "Focused squat, bench press, and deadlift progression with technical form checks."
+    }
 ]
