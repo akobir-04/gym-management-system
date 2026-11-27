@@ -4,7 +4,7 @@
 import { API_CONFIG } from "../config/config.js";
 
 /**
- * Generic helper function for sending HTTP requests to our REST API
+ * Generic helper function for sending HTTP requests to our REST API.
  */
 export async function apiRequest(endpoint, options = {}) {
   const url = `${API_CONFIG.BASE_URL}${endpoint}`;
@@ -45,6 +45,19 @@ export const MembersAPI = {
 
 // --- Classes API Endpoints (Student 2) ---
 export const ClassesAPI = {
+  /**
+   * Fetch all available gym classes.
+   */
   getAll: () => apiRequest(API_CONFIG.ENDPOINTS.CLASSES),
-  getById: (id) => apiRequest(`${API_CONFIG.ENDPOINTS.CLASSES}?id=${encodeURIComponent(id)}`)
+
+  /**
+   * Fetch details for a single gym class by ID.
+   */
+  getById: (id) => {
+    const classId = Number(id);
+    if (!Number.isInteger(classId) || classId <= 0) {
+      return Promise.reject(new Error("Invalid class ID"));
+    }
+    return apiRequest(`${API_CONFIG.ENDPOINTS.CLASSES}?id=${encodeURIComponent(classId)}`);
+  }
 };
